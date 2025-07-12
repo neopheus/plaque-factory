@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import HomePage from '@/components/HomePage'
+import HomePageOptimized from '@/components/HomePageOptimized'
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -34,5 +34,5 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function Page() {
-  return <HomePage />
+  return <HomePageOptimized />
 }

@@ -33,7 +33,7 @@
     "@types/react": "^19.0.12",
     "@types/react-dom": "19.0.4",
     "@types/unist": "^3.0.3",
-    "daisyui": "^5.0.43",
+    "daisyui": "^5.0.46",
     "eslint": "^8",
     "eslint-config-next": "15.2.4",
     "imagemin": "^9.0.1",

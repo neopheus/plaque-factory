@@ -29,10 +29,11 @@ const BlogCard: FC<Props> = memo(({ article }) => {
         title={`Lire l'article : ${article.title}`}
         className="flex-grow block h-full"
       >
-        <div className="relative h-48 overflow-hidden mt-4 mr-4 ml-4 rounded-md">
+        <div className="relative h-48 overflow-hidden mt-2 mr-2 ml-2 rounded-md">
           <Image
             src={article.image}
             alt={article.title}
+            quality={50}
             fill
             className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105 rounded-md"
           />

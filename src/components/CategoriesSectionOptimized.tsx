@@ -4,6 +4,7 @@ import Image from "next/image";
 import { CategoryItem } from "@/types/theme";
 import { useState, useEffect, memo } from "react";
 import { defaultTheme } from "@/config/themes/default.theme";
+import { CategoryIcon } from "./Icons";
 
 // Lazy load framer-motion
 const MotionDiv = dynamic(
@@ -33,15 +34,15 @@ function Categories() {
   return (
     <section
       id="catégories"
-      className="relative py-10 md:py-14 flex flex-col items-center bg-[url('/images/bg/bg5.webp')] bg-cover border-t border-b"
+      className="relative py-10 md:py-14 flex flex-col items-start lg:items-center bg-[url('/images/bg/bg5.webp')] bg-cover border-t border-b"
     >
-      <div className="max-w-3xl lg:flex flex-col justify-center">
+      <div className="lg:flex flex-col justify-center">
         <div className="badge badge-sm mb-4 rounded-2xl mx-auto">
-          <i className="fa fa-layer-group"></i> Catégories
+          <CategoryIcon className="w-3 h-3"/><span>Catégories</span>
         </div>
         <h2 className="text-left lg:text-center">
           On a la plaque <br />
-          <span className="text-[#FFD713]">qu'il vous faut</span>
+          <span className="italic">qu'il vous faut</span>
         </h2>
         <p className="lg:text-center mb-4 md:mb-8 max-w-2xl">
           Si ça roule, on a la plaque d'immatriculation qui va avec. Parcourez

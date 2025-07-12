@@ -5,7 +5,14 @@ import { defaultTheme } from "@/config/themes/default.theme";
 import Navbar from "../components/Navbar";
 import HeaderSection from "../components/HeaderSection";
 import PersonalizationSection from "../components/PersonalizationSectionOptimized";
-import Footer from "../components/Footer";
+import CategoriesSectionOptimized from "../components/CategoriesSectionOptimized";
+import AboutSectionOptimized from "../components/AboutSectionOptimized";
+import FaqSectionOptimized from "./FaqSectionOptimized";
+import VideoSectionOptimized from "../components/VideoSectionOptimized";
+import BlogSectionOptimized from "./BlogSectionOptimized";
+import FooterOptimized from "./FooterOptimized";
+import { DeliverySection } from "./DeliverySection";
+import PersonalizationSectionOptimized from "../components/PersonalizationSectionOptimized";
 
 // Critical CSS for above-the-fold content
 const criticalStyles = `
@@ -127,7 +134,13 @@ export default function HomePage() {
       >
         <Navbar />
         <HeaderSection />
-        <PersonalizationSection />
+        <PersonalizationSectionOptimized />
+
+        <div data-preload="ReassuranceSection">
+          <Suspense fallback={<SectionSkeleton />}>
+            <DeliverySection />
+          </Suspense>
+        </div>
         
         <div data-preload="FeedbackSection">
           <Suspense fallback={<SectionSkeleton />}>
@@ -137,35 +150,35 @@ export default function HomePage() {
         
         <div data-preload="CategoriesSection">
           <Suspense fallback={<SectionSkeleton />}>
-            <CategoriesSection />
+            <CategoriesSectionOptimized />
           </Suspense>
         </div>
         
         <div data-preload="AboutSection">
           <Suspense fallback={<SectionSkeleton />}>
-            <AboutSection />
+            <AboutSectionOptimized />
           </Suspense>
         </div>
         
         <div data-preload="FaqSection">
           <Suspense fallback={<SectionSkeleton />}>
-            <FaqSection />
+            <FaqSectionOptimized />
           </Suspense>
         </div>
         
         <div data-preload="VideoSection">
           <Suspense fallback={<SectionSkeleton />}>
-            <VideoSection />
+            <VideoSectionOptimized />
           </Suspense>
         </div>
         
         <div data-preload="BlogSection">
           <Suspense fallback={<SectionSkeleton />}>
-            <BlogSection />
+            <BlogSectionOptimized />
           </Suspense>
         </div>
         
-        <Footer />
+        <FooterOptimized />
       </main>
     </>
   );

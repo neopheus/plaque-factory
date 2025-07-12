@@ -6,6 +6,11 @@ import Navbar from "../components/Navbar";
 import HeaderSection from "../components/HeaderSection";
 import PersonalizationSection from "../components/PersonalizationSection";
 import Footer from "../components/FooterWithLazyBg";
+import PersonalizationSectionOptimized from "./PersonalizationSectionOptimized";
+import CategoriesSectionOptimized from "./CategoriesSectionOptimized";
+import AboutSectionOptimized from "../components/AboutSectionOptimized";
+import FaqSectionOptimized from "./FaqSectionOptimized";
+import BlogSectionOptimized from "./BlogSectionOptimized";
 
 // Lazy load heavy components
 const FeedbackSection = dynamic(() => import("../components/FeedbackSection"), {
@@ -71,22 +76,22 @@ export default function HomePage() {
       >
         <Navbar />
         <HeaderSection />
-        <PersonalizationSection />
+        <PersonalizationSectionOptimized />
         
         <Suspense fallback={<SectionSkeleton />}>
           <FeedbackSection />
         </Suspense>
         
         <Suspense fallback={<SectionSkeleton />}>
-          <CategoriesSection />
+          <CategoriesSectionOptimized />
         </Suspense>
         
         <Suspense fallback={<SectionSkeleton />}>
-          <AboutSection />
+          <AboutSectionOptimized />
         </Suspense>
         
         <Suspense fallback={<SectionSkeleton />}>
-          <FaqSection />
+          <FaqSectionOptimized />
         </Suspense>
         
         <Suspense fallback={<SectionSkeleton />}>
@@ -94,7 +99,7 @@ export default function HomePage() {
         </Suspense>
         
         <Suspense fallback={<SectionSkeleton />}>
-          <BlogSection />
+          <BlogSectionOptimized />
         </Suspense>
         
         <Footer />

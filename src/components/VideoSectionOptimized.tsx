@@ -22,13 +22,13 @@ export default function VideoSectionOptimized() {
     <section className="py-10 md:py-16 text-left bg-white w-full">
       <div className="max-w-3xl mx-auto lg:flex flex-col justify-center">
         <div className="badge badge-sm mb-4 rounded-2xl mx-auto">
-          <PlayIcon className="inline w-3 h-3 mr-1" />Vidéo
+          <PlayIcon className="w-3 h-3" /><span>Vidéo</span>
         </div>
         <h2 className="text-left lg:text-center lg:max-w-lg mx-auto">
           Découvrez notre
-          <span className="text-[#FFD713]"> savoir-faire</span> en action
+          <span className="italic"> savoir-faire</span> en action
         </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto mb-10 text-left lg:text-center">
+        <p className="text-gray-600 mx-auto mb-10 text-left lg:text-center">
           Chaque commande est préparée avec précision et passion pour vous
           fabriquer une plaque d'immatriculation conforme, stylée et prête à
           poser sans prise de tête.

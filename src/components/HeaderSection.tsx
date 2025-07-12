@@ -32,10 +32,10 @@ export default function HeaderSection() {
   return (
     <>
 
-      <header className="relative pt-20 pb-10 md:py-40 flex-col items-center bg-white bg-cover bg-center">
-        <div className="relative z-10 flex flex-col-reverse sm:flex-row items-center justify-between max-w-7xl mx-auto min-w-80">
+      <header className="relative pt-20 pb-10 md:py-40 items-center bg-white bg-cover bg-center">
+        <div className="relative z-10 flex flex-col-reverse lg:flex-row items-center justify-between max-w-7xl mx-auto min-w-80">
           <div className="text-left lg:w-1/2 space-y-4 pt-6">
-            <div className="inline-flex items-center border border-black rounded-full px-1.5 py-0.5 text-[10px] text-sm bg-white w-fit bg-white/80 backdrop-blur-sm ml-1">
+            <div className="inline-flex items-center border border-black rounded-full px-2 py-0.5 text-[10px] text-sm bg-white w-fit bg-white/80 backdrop-blur-sm ml-1">
               <Image
                 src="/images/icons/france-flag.webp"
                 alt="fabrication plaques françaises"
@@ -49,11 +49,11 @@ export default function HeaderSection() {
               Créez votre plaque d’immatriculation personnalisée
             </h1>
 
-            <div className="w-5/6 mb-2">
+            <div className="w-5/6 mb-2 ml-2">
               <p className="text-sm lg:text-base font-light">
                 Choisissez facilement votre style, votre format et vos options
                 pour créer une plaque homologuée et personnalisée adaptée à
-                votre véhicule. <br />
+                votre véhicule.
                 Livraison rapide, qualité professionnelle <br />
                 <span className="font-bold">
                   {" "}
@@ -109,13 +109,13 @@ export default function HeaderSection() {
             <div className="flex flex-row gap-[10px] items-center cta-container">
               <a
                 href="#personnalisation"
-                className="header-cta bg-yellow-400 text-black font-normal px-6 py-4 rounded-lg shadow-lg transition duration-300 inline-flex items-center"
+                className="header-cta bg-yellow-400 text-black font-normal py-4 rounded-lg shadow-lg transition duration-300 inline-flex items-center"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
                 title="Créer ma plaque personnalisée maintenant"
               >
                 Je crée ma plaque{" "}
-                <ArrowRightIcon className="inline ml-2 w-4 h-4 cta-arrow" />
+                <ArrowRightIcon className="inline w-4 h-4 cta-arrow" />
               </a>
               <a
                 href="https://module.plaqueimmat.fr/?aff=cc58d6de-e03b-45b5-b678-0f6103f8d0e6"
@@ -127,7 +127,7 @@ export default function HeaderSection() {
                 title="Accéder au module complet de création de plaque"
               >
                 Accéder au module complet{" "}
-                <ArrowRightIcon className="inline ml-2 w-4 h-4 cta-arrow-2" />
+                <ArrowRightIcon className="inline w-4 h-4 cta-arrow-2" />
               </a>
             </div>
           </div>

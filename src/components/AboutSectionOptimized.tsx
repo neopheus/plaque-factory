@@ -4,6 +4,8 @@ import React, { memo } from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { useInView } from "react-intersection-observer";
+import { HouseIcon } from "@/components/Icons";
+
 
 // Lazy load CountUp component
 const CountUp = dynamic(() => import("react-countup"), {
@@ -55,11 +57,11 @@ function AboutSection() {
         {/* Texte gauche */}
         <div className="max-w-lg">
           <div className="badge badge-sm mb-4 rounded-2xl">
-            <i className="fa fa-house"></i>À propos
+            <HouseIcon className="w-3 h-3" /><span>À propos</span>
           </div>
           <h2 className="text-left">
             La Bonne Plaque,
-            <span className="block"> votre <span className="text-[#FFD713]">expert</span> en plaques qui roulent.</span>
+            <span className="block"> votre <span className="italic">expert</span> en plaques qui roulent.</span>
           </h2>
           <div className="flex flex-col">
             <p className="italic">

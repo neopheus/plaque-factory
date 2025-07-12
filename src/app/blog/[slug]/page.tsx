@@ -61,9 +61,9 @@ export default async function BlogPage({
   return (
     <div>
       <Navbar />
-      <main className="bg-gray-50 py-10 md:py-32">
-        <div className="mx-auto max-w-3xl px-4 py-10 md:py-10">
-          <section className="mb-20 ">
+      <main className="bg-gray-50 pb-10 pt-24 md:py-32">
+        <div className="mx-auto max-w-3xl px-2 md:py-10">
+          <section className="mb-20">
             <div className="max-w-7xl mb-8">
               <nav className="text-sm text-gray-500">
                 <Link href="/" className="hover:underline text-blue-700">
@@ -77,7 +77,7 @@ export default async function BlogPage({
                 <span className="text-gray-700">{article.title}</span>
               </nav>
             </div>
-            <h1 className="text-4xl font-bold mb-10 text-left">
+            <h1 className="text-4xl font-bold text-left">
               {article.title}
             </h1>
             <div className="flex items-center space-x-4 mb-6">
@@ -123,8 +123,8 @@ export default async function BlogPage({
             </div>
           </section>
         </div>
-        <section className="mb-10 max-w-6xl flex flex-col justify-center mx-auto">
-          <h2 className="text-2xl font-semibold mb-6">Articles récents</h2>
+        <section className="mb-10 max-w-6xl flex flex-col justify-center mx-auto border-t border-gray-200 pt-8">
+          <h2 className="text-2xl font-semibold mb-6 pl-2">Articles récents</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3">
             {otherArticles.map((article) => (
               <BlogCard key={article.id} article={article} />
